@@ -53,11 +53,11 @@ const Logo = ({ className = "h-10 w-auto" }) => (
       </linearGradient>
     </defs>
     <g transform="translate(8,8)">
-      <path d="M0 28c20-16 44-16 64 0 22-18 48-18 70 0" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round"/>
-      <path d="M100 8h34l10 10v16h-44z" fill="none" stroke="currentColor" strokeWidth="3"/>
-      <circle cx="108" cy="38" r="6" fill="none" stroke="currentColor" strokeWidth="3"/>
-      <circle cx="134" cy="38" r="6" fill="none" stroke="currentColor" strokeWidth="3"/>
-      <path d="M144 18h-12V8" fill="none" stroke="currentColor" strokeWidth="3"/>
+      <path d="M0 28c20-16 44-16 64 0 22-18 48-18 70 0" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" />
+      <path d="M100 8h34l10 10v16h-44z" fill="none" stroke="currentColor" strokeWidth="3" />
+      <circle cx="108" cy="38" r="6" fill="none" stroke="currentColor" strokeWidth="3" />
+      <circle cx="134" cy="38" r="6" fill="none" stroke="currentColor" strokeWidth="3" />
+      <path d="M144 18h-12V8" fill="none" stroke="currentColor" strokeWidth="3" />
     </g>
     <g transform="translate(168,16)" fill="currentColor">
       <text x="0" y="18" fontFamily="Inter, ui-sans-serif, system-ui" fontWeight="800" fontSize="16">USMAN</text>
@@ -82,27 +82,26 @@ export default function UsmanRaitBijri() {
   return (
     <div className="min-h-screen bg-white text-gray-900">
       {/* Header */}
-      <header className="sticky top-0 z-40 w-full bg-white/80 backdrop-blur border-b">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
-          <div className="flex items-center gap-3">
+       <header className="sticky top-0 z-40 w-full bg-white/80 backdrop-blur border-b">
+        <div className="mx-auto flex flex-col sm:flex-row max-w-6xl items-center justify-between px-4 py-3 gap-3">
+          <div className="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-start">
             <Logo className="h-8 w-auto" />
             <div className="hidden sm:flex items-center gap-2">
               <Badge><MapPin className="h-3.5 w-3.5"/> Bahria Town, Lahore</Badge>
               <Badge><ShieldCheck className="h-3.5 w-3.5"/> Sahi Wazan • Best Rate</Badge>
             </div>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 w-full sm:w-auto justify-end sm:justify-start">
             <a href={WHATSAPP_LINK} className="hidden sm:inline-flex items-center gap-2 rounded-2xl border px-4 py-2 text-sm font-semibold hover:shadow bg-green-500">
               <MessageCircle className="h-4 w-4"/> WhatsApp Order
             </a>
-            <a href={`tel:${PHONE_NUMBER}`} className="inline-flex items-center gap-2 rounded-2xl bg-black px-4 py-2 text-sm font-semibold text-white shadow hover:opacity-90">
+            <a href={`tel:${PHONE_NUMBER}`} className="w-full sm:w-1/2 justify-center inline-flex items-center gap-2 rounded-2xl bg-black px-4 py-2 text-sm font-semibold text-white shadow hover:opacity-90">
               <PhoneCall className="h-4 w-4"/> Call Now +923124209832
             </a>
           </div>
         </div>
       </header>
 
-      {/* Hero */}
       <Section id="home" className="pt-8 sm:pt-14">
         <div className="grid gap-8 sm:grid-cols-2 sm:items-center">
           <div className="space-y-5">
@@ -114,17 +113,17 @@ export default function UsmanRaitBijri() {
             </p>
             <p className="text-sm text-gray-600">*Order timing aur availability par depend karta hai.</p>
             <div className="flex flex-wrap items-center gap-3">
-              <a href={WHATSAPP_LINK} className="inline-flex items-center gap-2 rounded-2xl bg-black px-5 py-3 text-white font-semibold shadow hover:opacity-90">
-                <MessageCircle className="h-5 w-5"/> WhatsApp Order Karein
+              <a href={WHATSAPP_LINK} className="inline-flex items-center gap-2 rounded-2xl bg-black px-5 py-3 text-white font-semibold shadow hover:opacity-90 w-full sm:w-auto justify-center">
+                <MessageCircle className="h-5 w-5" /> WhatsApp Order Karein
               </a>
-              <a href="#rates" className="inline-flex items-center gap-2 rounded-2xl border px-5 py-3 font-semibold hover:shadow">
-                <Package className="h-5 w-5"/> Aaj ke Rates
+              <a href="#rates" className="inline-flex items-center gap-2 rounded-2xl border px-5 py-3 font-semibold hover:shadow w-full sm:w-auto justify-center">
+                <Package className="h-5 w-5" /> Aaj ke Rates
               </a>
             </div>
-            <div className="flex gap-6 text-sm text-gray-700">
-              <div className="flex items-center gap-2"><Timer className="h-4 w-4"/> Same‑Day Supply</div>
-              <div className="flex items-center gap-2"><Truck className="h-4 w-4"/> Dumper/Trolley</div>
-              <div className="flex items-center gap-2"><ShieldCheck className="h-4 w-4"/> Verified Weight</div>
+            <div className="flex flex-col sm:flex-row gap-6 text-sm text-gray-700">
+              <div className="flex items-center gap-2"><Timer className="h-4 w-4" /> Same‑Day Supply</div>
+              <div className="flex items-center gap-2"><Truck className="h-4 w-4" /> Dumper/Trolley</div>
+              <div className="flex items-center gap-2"><ShieldCheck className="h-4 w-4" /> Verified Weight</div>
             </div>
           </div>
           <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border bg-gradient-to-br from-gray-50 to-gray-100">
@@ -143,13 +142,13 @@ export default function UsmanRaitBijri() {
       <Section id="rates">
         <h2 className="text-2xl sm:text-3xl font-bold">Aaj ke Rates</h2>
         <p className="mt-2 text-gray-600">Call/WhatsApp par realtime confirm kar lein. Bulk par special rate.</p>
-        <div className="mt-6 grid gap-4 sm:grid-cols-3">
+        <div className="mt-6 grid gap-4 grid-cols-1 sm:grid-cols-3">
           {[
             { name: "Lawrencepur Rait", unit: "Per Trolley", price: "Rs. —", note: "Finishing grade" },
             { name: "Ravi/Chenab Rait", unit: "Per Trolley", price: "Rs. —", note: "General construction" },
             { name: "Bijri / Crushed Gravel", unit: "Per Trolley", price: "Rs. —", note: "Base & lintels" },
           ].map((i) => (
-            <div key={i.name} className="rounded-2xl border p-5 hover:shadow-sm">
+            <div key={i.name} className="rounded-2xl border p-5 hover:shadow-sm flex flex-col justify-between">
               <div className="flex items-start justify-between">
                 <div>
                   <p className="font-semibold">{i.name}</p>
@@ -168,13 +167,13 @@ export default function UsmanRaitBijri() {
       {/* Why Us */}
       <Section id="why">
         <h2 className="text-2xl sm:text-3xl font-bold">Kyoon Hum?</h2>
-        <div className="mt-6 grid gap-4 sm:grid-cols-3">
+        <div className="mt-6 grid gap-4 grid-cols-1 sm:grid-cols-3">
           {[
-            { icon: <ShieldCheck className="h-5 w-5"/>, title: "Sahi Wazan", desc: "Weight slip & on‑site verification." },
-            { icon: <Timer className="h-5 w-5"/>, title: "Tez Delivery", desc: "Bahria Town & nearby – same‑day." },
-            { icon: <Truck className="h-5 w-5"/>, title: "Dumper & Trolley", desc: "Har site size ke liye fleet available." },
+            { icon: <ShieldCheck className="h-5 w-5" />, title: "Sahi Wazan", desc: "Weight slip & on‑site verification." },
+            { icon: <Timer className="h-5 w-5" />, title: "Tez Delivery", desc: "Bahria Town & nearby – same‑day." },
+            { icon: <Truck className="h-5 w-5" />, title: "Dumper & Trolley", desc: "Har site size ke liye fleet available." },
           ].map((f) => (
-            <div key={f.title} className="rounded-2xl border p-5">
+            <div key={f.title} className="rounded-2xl border p-5 flex flex-col justify-between">
               <div className="flex items-center gap-2 font-semibold">{f.icon} {f.title}</div>
               <p className="mt-2 text-sm text-gray-700">{f.desc}</p>
             </div>
@@ -186,16 +185,16 @@ export default function UsmanRaitBijri() {
       <Section id="reviews">
         <div className="rounded-2xl border p-6">
           <div className="flex items-center gap-3">
-            <Star className="h-5 w-5"/>
+            <Star className="h-5 w-5" />
             <h3 className="text-xl font-bold">Contractors ke Feedback</h3>
           </div>
-          <div className="mt-4 grid gap-4 sm:grid-cols-3">
+          <div className="mt-4 grid gap-4 grid-cols-1 sm:grid-cols-3">
             {[
               { name: "Adnan Contractor", text: "Rates fair aur delivery time par. Site par wazan verify karwate hain." },
               { name: "Hassan Builders", text: "Lawrencepur rait ki quality consistent. Repeat orders karte hain." },
               { name: "Areeb Developer", text: "WhatsApp par quick quotation aur same din supply mil gayi." },
             ].map((r) => (
-              <div key={r.name} className="rounded-xl border p-4">
+              <div key={r.name} className="rounded-xl border p-4 flex flex-col justify-between">
                 <p className="text-sm">“{r.text}”</p>
                 <p className="mt-2 text-xs text-gray-600">— {r.name}</p>
               </div>
@@ -206,7 +205,7 @@ export default function UsmanRaitBijri() {
 
       {/* Contact */}
       <Section id="contact">
-        <div className="grid gap-6 sm:grid-cols-2">
+        <div className="grid gap-6 grid-cols-1 sm:grid-cols-2">
           <div className="rounded-2xl border p-6">
             <h3 className="text-xl font-bold">Order / Poora Pata</h3>
             <p className="mt-2 text-gray-700">{BUSINESS_DESCRIPTION}</p>
@@ -218,10 +217,16 @@ export default function UsmanRaitBijri() {
               <p><span className="font-semibold">Timing:</span> 07:00–19:30 (Daily)</p>
               <p><span className="font-semibold">Location:</span> No location; deliveries and home services only</p>
             </div>
-            <div className="mt-4 flex gap-3">
-              <a href={WHATSAPP_LINK} className="inline-flex items-center gap-2 rounded-2xl bg-black px-5 py-3 text-white font-semibold hover:opacity-90"><MessageCircle className="h-5 w-5"/> WhatsApp Now</a>
-              <a href={`tel:${PHONE_NUMBER}`} className="inline-flex items-center gap-2 rounded-2xl border px-5 py-3 font-semibold hover:shadow"><PhoneCall className="h-5 w-5"/> Call</a>
-              <a href={SMS_LINK} className="inline-flex items-center gap-2 rounded-2xl border px-5 py-3 font-semibold hover:shadow">SMS</a>
+            <div className="mt-4 flex flex-col sm:flex-row gap-3">
+              <a href={WHATSAPP_LINK} className="inline-flex items-center gap-2 rounded-2xl bg-black px-5 py-3 text-white font-semibold hover:opacity-90 justify-center">
+                <MessageCircle className="h-5 w-5" /> WhatsApp Now
+              </a>
+              <a href={`tel:${PHONE_NUMBER}`} className="inline-flex items-center gap-2 rounded-2xl border px-5 py-3 font-semibold hover:shadow justify-center">
+                <PhoneCall className="h-5 w-5" /> Call
+              </a>
+              <a href={SMS_LINK} className="inline-flex items-center gap-2 rounded-2xl border px-5 py-3 font-semibold hover:shadow justify-center">
+                SMS
+              </a>
             </div>
           </div>
           <div className="rounded-2xl border p-6">
@@ -249,7 +254,7 @@ export default function UsmanRaitBijri() {
         <Section className="py-8">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <div className="flex items-center gap-3">
-              <Logo className="h-7"/>
+              <Logo className="h-7" />
               <div>
                 <p className="font-semibold">{BUSINESS_NAME}</p>
                 <p className="text-xs text-gray-600">Bahria Town, Lahore — At Your Doorstep</p>
@@ -261,27 +266,29 @@ export default function UsmanRaitBijri() {
       </footer>
 
       {/* SEO / LocalBusiness JSON‑LD */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": ["LocalBusiness", "SandAndGravelSupplier", "ConstructionMaterialWholesaler"],
-        name: BUSINESS_NAME,
-        description: BUSINESS_DESCRIPTION,
-        telephone: PHONE_NUMBER,
-        areaServed: SERVICE_AREAS,
-        openingHours: OPENING_HOURS,
-        contactPoint: [
-          { "@type": "ContactPoint", telephone: PHONE_NUMBER, contactType: "customer service" },
-          { "@type": "ContactPoint", telephone: WHATSAPP_NUMBER, contactType: "WhatsApp" },
-          { "@type": "ContactPoint", telephone: SMS_LINK, contactType: "SMS" }
-        ],
-        address: { "@type": "PostalAddress", addressLocality: "Lahore", addressRegion: "Punjab", addressCountry: "PK" },
-        url: typeof window !== 'undefined' ? window.location.href : "",
-        makesOffer: [
-          { "@type": "Offer", itemOffered: { "@type": "Product", name: "Lawrencepur Rait" } },
-          { "@type": "Offer", itemOffered: { "@type": "Product", name: "Ravi/Chenab Rait" } },
-          { "@type": "Offer", itemOffered: { "@type": "Product", name: "Bijri / Crushed Gravel" } }
-        ]
-      }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": ["LocalBusiness", "SandAndGravelSupplier", "ConstructionMaterialWholesaler"],
+          name: BUSINESS_NAME,
+          description: BUSINESS_DESCRIPTION,
+          telephone: PHONE_NUMBER,
+          areaServed: SERVICE_AREAS,
+          openingHours: OPENING_HOURS,
+          contactPoint: [
+            { "@type": "ContactPoint", telephone: PHONE_NUMBER, contactType: "customer service" },
+            { "@type": "ContactPoint", telephone: WHATSAPP_NUMBER, contactType: "WhatsApp" },
+            { "@type": "ContactPoint", telephone: SMS_LINK, contactType: "SMS" }
+          ],
+          address: { "@type": "PostalAddress", addressLocality: "Lahore", addressRegion: "Punjab", addressCountry: "PK" },
+          url: typeof window !== 'undefined' ? window.location.href : "",
+          makesOffer: [
+            { "@type": "Offer", itemOffered: { "@type": "Product", name: "Lawrencepur Rait" } },
+            { "@type": "Offer", itemOffered: { "@type": "Product", name: "Ravi/Chenab Rait" } },
+            { "@type": "Offer", itemOffered: { "@type": "Product", name: "Bijri / Crushed Gravel" } }
+          ]
+        })
+      }} />
     </div>
   );
 }
