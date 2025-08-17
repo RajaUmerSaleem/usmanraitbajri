@@ -82,34 +82,34 @@ export default function UsmanRaitBijri() {
   return (
     <div className="min-h-screen bg-white text-gray-900">
       {/* Header */}
-       <header className="sticky top-0 z-40 w-full bg-white/80 backdrop-blur border-b">
+      <header className="sticky top-0 z-40 w-full bg-white/80 backdrop-blur border-b">
         <div className="mx-auto flex flex-col sm:flex-row max-w-6xl items-center justify-between px-4 py-3 gap-3">
           <div className="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-start">
             <Logo className="h-8 w-auto" />
             <div className="hidden sm:flex items-center gap-2">
-              <Badge><MapPin className="h-3.5 w-3.5"/> Bahria Town, Lahore</Badge>
-              <Badge><ShieldCheck className="h-3.5 w-3.5"/> Sahi Wazan • Best Rate</Badge>
+              <Badge><MapPin className="h-3.5 w-3.5" /> Bahria Town, Lahore</Badge>
+              <Badge><ShieldCheck className="h-3.5 w-3.5" /> Sahi Quality • Best Rate</Badge>
             </div>
           </div>
           <div className="flex items-center gap-2 w-full sm:w-auto justify-end sm:justify-start">
             <a href={WHATSAPP_LINK} className="hidden sm:inline-flex items-center gap-2 rounded-2xl border px-4 py-2 text-sm font-semibold hover:shadow bg-green-500">
-              <MessageCircle className="h-4 w-4"/> WhatsApp Order
+              <MessageCircle className="h-4 w-4" /> WhatsApp Order
             </a>
             <a href={`tel:${PHONE_NUMBER}`} className="w-full sm:w-1/2 justify-center inline-flex items-center gap-2 rounded-2xl bg-black px-4 py-2 text-sm font-semibold text-white shadow hover:opacity-90">
-              <PhoneCall className="h-4 w-4"/> Call Now +923124209832
+              <PhoneCall className="h-4 w-4" /> Call Now +923124209832
             </a>
           </div>
         </div>
       </header>
 
       <Section id="home" className="pt-8 sm:pt-14">
-        <div className="grid gap-8 sm:grid-cols-2 sm:items-center">
+        <div className="grid gap-8 sm:grid-cols-2  sm:items-center">
           <div className="space-y-5">
             <h1 className="text-3xl sm:text-5xl font-extrabold leading-tight">
               {BUSINESS_NAME}
             </h1>
             <p className="text-lg sm:text-xl leading-relaxed">
-              <span className="font-semibold">Lahore</span> mein high‑quality <span className="font-semibold">rait, bajri aur gravel</span> — <span className="font-semibold">doorstep delivery</span> ke saath. <span className="font-semibold">Same‑day</span> supply*, sahi wazan, behtareen rate.
+              <span className="font-semibold">Lahore</span> mein high‑quality <span className="font-semibold">rait (sand), bajri/crush (gravel) </span> — <span className="font-semibold">doorstep delivery</span> ke saath. <span className="font-semibold">Jldi</span> supply*, sahi Quality, behtareen rate.
             </p>
             <p className="text-sm text-gray-600">*Order timing aur availability par depend karta hai.</p>
             <div className="flex flex-wrap items-center gap-3">
@@ -121,16 +121,24 @@ export default function UsmanRaitBijri() {
               </a>
             </div>
             <div className="flex flex-col sm:flex-row gap-6 text-sm text-gray-700">
-              <div className="flex items-center gap-2"><Timer className="h-4 w-4" /> Same‑Day Supply</div>
+              <div className="flex items-center gap-2"><Timer className="h-4 w-4" /> Jldi Supply</div>
               <div className="flex items-center gap-2"><Truck className="h-4 w-4" /> Dumper/Trolley</div>
-              <div className="flex items-center gap-2"><ShieldCheck className="h-4 w-4" /> Verified Weight</div>
+              <div className="flex items-center gap-2"><ShieldCheck className="h-4 w-4" /> Verified Quality</div>
             </div>
           </div>
           <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border bg-gradient-to-br from-gray-50 to-gray-100">
-            <div className="absolute inset-6 rounded-xl border bg-white/70 backdrop-blur flex items-center justify-center text-center p-6">
+            <video
+              className="absolute inset-0 w-full h-full object-cover rounded-xl"
+              src="/truck_arrival.mp4"
+              loop
+              autoPlay
+              muted
+              playsInline
+            />
+            <div className="absolute inset-6 rounded-xl border backdrop-blur-sm flex items-center justify-center text-center p-6 text-white">
               <div>
-                <p className="text-2xl font-bold">“At Your Doorstep”</p>
-                <p className="text-gray-600 mt-2">Rait • Bijri • Gravel • Bharosa‑mand Delivery</p>
+                <p className="text-2xl font-bold ">“At Your Doorstep”</p>
+                <p className=" mt-2">Rait • Bijri • Gravel • Bharosa‑mand Delivery</p>
                 <a href={GOOGLE_MAPS_LINK} className="mt-4 inline-block text-sm underline">Bahria Town, Lahore</a>
               </div>
             </div>
@@ -169,7 +177,7 @@ export default function UsmanRaitBijri() {
         <h2 className="text-2xl sm:text-3xl font-bold">Kyoon Hum?</h2>
         <div className="mt-6 grid gap-4 grid-cols-1 sm:grid-cols-3">
           {[
-            { icon: <ShieldCheck className="h-5 w-5" />, title: "Sahi Wazan", desc: "Weight slip & on‑site verification." },
+            { icon: <ShieldCheck className="h-5 w-5" />, title: "Sahi Quality", desc: "Weight slip & on‑site verification." },
             { icon: <Timer className="h-5 w-5" />, title: "Tez Delivery", desc: "Bahria Town & nearby – same‑day." },
             { icon: <Truck className="h-5 w-5" />, title: "Dumper & Trolley", desc: "Har site size ke liye fleet available." },
           ].map((f) => (
@@ -190,7 +198,7 @@ export default function UsmanRaitBijri() {
           </div>
           <div className="mt-4 grid gap-4 grid-cols-1 sm:grid-cols-3">
             {[
-              { name: "Adnan Contractor", text: "Rates fair aur delivery time par. Site par wazan verify karwate hain." },
+              { name: "Adnan Contractor", text: "Rates fair aur delivery time par. Site par Quality verify karwate hain." },
               { name: "Hassan Builders", text: "Lawrencepur rait ki quality consistent. Repeat orders karte hain." },
               { name: "Areeb Developer", text: "WhatsApp par quick quotation aur same din supply mil gayi." },
             ].map((r) => (
@@ -238,7 +246,7 @@ export default function UsmanRaitBijri() {
               </details>
               <details className="rounded-lg border p-3">
                 <summary className="font-semibold">Return/Change policy?</summary>
-                <p className="mt-2">Site par weight/quality confirm karne ke baad hi offload karte hain. Mis‑delivery me immediate replace.</p>
+                <p className="mt-2">Site par quality confirm karne ke baad hi offload karte hain. Mis‑delivery me immediate replace.</p>
               </details>
               <details className="rounded-lg border p-3">
                 <summary className="font-semibold">Bulk discount?</summary>
