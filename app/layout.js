@@ -41,14 +41,14 @@ export default function RootLayout({ children }) {
           `
         }} />
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-BSFRMR2S09"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){
-          dataLayer.push(arguments)
-          }
-          gtag('js', new Date());
-          gtag('config', 'G-BSFRMR2S09');
-        </script>
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-BSFRMR2S09');
+          `
+        }} />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {/* Google Tag Manager (noscript) */}
