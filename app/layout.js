@@ -40,12 +40,21 @@ export default function RootLayout({ children }) {
             gtag('config', 'AW-17486808845');
           `
         }} />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-BSFRMR2S09"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){
+          dataLayer.push(arguments)
+          }
+          gtag('js', new Date());
+          gtag('config', 'G-BSFRMR2S09');
+        </script>
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MJQGHQZ8"
-            height="0" width="0" style={{display:"none",visibility:"hidden"}}></iframe>
+            height="0" width="0" style={{ display: "none", visibility: "hidden" }}></iframe>
         </noscript>
         {children}
       </body>
